@@ -7,15 +7,14 @@
 </head>
 <body>
 <?php
-// Crear un arreglo
 $arreglo = array();
 
-// Llenar el arreglo
-for ($i = 1; $i <= 20; $i++) {
 
+for ($i = 1; $i <= 20; $i++) {
     $valor = $i * 2;
     $arreglo[] = $valor;
 }
+
 
 $elementoMayor = max($arreglo);
 $posicionElementoMayor = array_search($elementoMayor, $arreglo);

@@ -15,11 +15,12 @@
     </form>
 
     <?php
-
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+        
         $ventas = floatval($_POST["ventas"]);
 
+        // % x img
         if ($ventas > 80) {
             $imagen = "verde.PNG";
             $mensaje = "Las ventas superan el 80%";
@@ -31,6 +32,7 @@
             $mensaje = "Las ventas están por debajo del 50%";
         }
 
+        //imprimir imagenes/texto
         echo "<img src='imagenes/$imagen' alt='Indicador de Ventas'><br>";
         echo "<p>$mensaje</p>";
     }

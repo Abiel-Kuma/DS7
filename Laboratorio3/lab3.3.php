@@ -5,8 +5,9 @@
 <Body>
 <?PHP
 if (array_key_exists('enviar', $_POST)) {
-    if ($_REQUEST['apellido'] != ""){
-        echo "El apellido Ingresado es: $_REQUEST[Apellido]";
+    if ($_REQUEST['apellido'] != "")
+        {
+        echo "El apellido Ingresado es: " . $_REQUEST['apellido'];
         }
         else
         {
@@ -15,9 +16,9 @@ if (array_key_exists('enviar', $_POST)) {
 
     echo "<BR>";
 
-    if ($_REQUEST['Nombre'] != )
+    if ($_REQUEST['Nombre'] != "" )
     {
-        echo "El nombre Ingresado es : $_REQUEST[Nombre]";
+        echo "El nombre Ingresado es :" . $_REQUEST['Nombre'];
     }
     else
     {
@@ -32,7 +33,7 @@ else{
     ?>
     <FORM ACTION = "lab3.3.php" METHOD="POST">
     Nombre: <INPUT TYPE="TEXT" NAME="Nombre"> <br>
-    Apellido:<INPUT TYPE="TEXT" NAME="Apellido"> <br>
+    Apellido:<INPUT TYPE="TEXT" NAME="apellido"> <br>
     <INPUT TYPE="SUBMIT" NAME="enviar" VALUE="Enviar datos"> </FORM>
 <?PHP
     }
