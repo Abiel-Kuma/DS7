@@ -7,21 +7,19 @@
 </head>
 <body>
 <?php
-// Crear un arreglo unidimensional de 20 elementos
+// Crear un arreglo
 $arreglo = array();
 
-// Llenar el arreglo con valores diferentes
+// Llenar el arreglo
 for ($i = 1; $i <= 20; $i++) {
-    // Generar un valor único para cada elemento (en este caso, simplemente el doble de $i)
+
     $valor = $i * 2;
     $arreglo[] = $valor;
 }
 
-// Encontrar el elemento mayor y su posición
 $elementoMayor = max($arreglo);
 $posicionElementoMayor = array_search($elementoMayor, $arreglo);
 
-// Mostrar el resultado
 echo "El elemento mayor es $elementoMayor y se encuentra en la posición $posicionElementoMayor del arreglo.";
 ?>
 
