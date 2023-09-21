@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario PHP</title>
+    <script>
+        function validarNumero() {
+            var valorInput = document.getElementById("valor").value;
+            var numero = parseInt(valorInput);
+
+            if (isNaN(numero) || numero % 2 == 0) {
+                alert("N no debe ser Par");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form method="POST" action="Parcial1.php" onsubmit="return validarNumero();">
+        <label for="valor">Ingresa un valor para N:</label>
+        <input type="text" name="valor" id="valor">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
