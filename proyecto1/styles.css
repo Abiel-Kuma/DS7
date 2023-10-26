@@ -1,0 +1,42 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 30%;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para botones y formularios (puedes personalizarlos) */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Agregar más estilos según tus necesidades */
