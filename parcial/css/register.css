@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Serif 4', serif;
+    text-decoration: none;
+}
+
+html,body
+{
+    background: linear-gradient(90deg, #ffdb93, #e7b145) ;
+    padding: 20px;
+
+}
+
+.container-all
+{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    border-radius: 35px;
+    overflow: hidden;
+    
+}
+
+.ctn-form
+{
+    width: 80%;
+    padding: 40px;
+    background: #fff5e1;
+}
+
+.title
+{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 300;
+    color:#e78e45;
+}
+
+label
+{
+    display: block;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #e78e45;
+}
+
+input[type= "email"], input[type="password"], input[type="Nombre"], input[type="Apellido"]
+{
+    width: 100%;
+    height: 30px;
+    background: rgba(0,0,0,0);
+    border: 0px;
+    outline: 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.13);
+    color: rgb(173, 82, 82);
+    font-size: 16px;
+    }
+
+input[type= "submit"]
+{
+    width: 100%;
+    height: 50px;
+    margin-top: 60px;
+    color: rgb(255, 255, 255);
+    border: 10px;
+    background: linear-gradient(90deg, #ffdb93, #e7b145) ;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 18px;
+}
+input[type= "submit"]:hover
+{
+    background: linear-gradient(90deg, #e9c172,  #ddba74);
+}
+
+.text-footer
+{
+    display: block;
+    margin-top: 100px;
+    text-align: center;
+    color: #e78e45;
+    font-weight: 500;
+}
+.text-footer a{
+    color:black;
+    font-weight: 500;
+}
+
+.ctn-text 
+{ 
+    width: 100%;
+    background-image: url(../imagenes/Imagen\ Reg.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+    position: relative;
+}
+
+.capa 
+{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background: linear-gradient(90deg, #e8eceb,  #bafff4);
+     opacity: 0.4;
+
+}
+
+.title-descripcion
+{
+    position: relative;
+    top: 80px;
+    color:black;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.text-descripçion
+{
+    position: relative;
+    top: 110px;
+    color:black;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+@media screen and (max-width:800px) 
+{
+    .ctn-text
+    {
+        display: none;
+    }   
+
+    .ctn-form
+    {
+        margin: auto;
+        width: 100%;
+        background: #fff5e1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
