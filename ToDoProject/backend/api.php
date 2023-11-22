@@ -89,13 +89,15 @@ elseif ($metodo === 'DELETE') {
         ];
     }
 }
-elseif ($metodo === 'PUT' || $metodo === 'POST') {
+elseif ($metodo === 'PUT') {
     // Actualizar tarea
-    $tarea_id = $_POST['tarea_id'] ?? '';
-    $titulo = $_POST['titulo'] ?? '';
-    $descripcion = $_POST['descripcion'] ?? '';
-    $estado = $_POST['estado'] ?? '';
-    $fecha = $_POST['fecha'] ?? '';
+    $put_vars = json_decode(file_get_contents("php://input"), true);
+
+    $tarea_id = $put_vars['tarea_id'] ?? '';
+    $titulo = $put_vars['titulo'] ?? '';
+    $descripcion = $put_vars['descripcion'] ?? '';
+    $estado = $put_vars['estado'] ?? '';
+    $fecha = $put_vars['fecha'] ?? '';
 
     if (!empty($tarea_id) && !empty($titulo) && !empty($descripcion) && !empty($estado) && !empty($fecha)) {
         $consulta = "UPDATE task SET Titulo = ?, Descripcion = ?, Estado = ?, Fecha = ? WHERE ID = ?";

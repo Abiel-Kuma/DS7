@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarea</title>
+    <link rel="stylesheet" href="styles_editarTarea.css">
+</head>
+<body>
+    <h1>Editar Tarea</h1>
+    <form id="editarForm">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+        <br>
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea>
+        <br>
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" required>
+        <br>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <br>
+        <button type="button" id="actualizarBtn">Actualizar</button>
+        <button type="button" id="cancelarBtn">Cancelar</button>
+    </form>
+    <script src="editarTarea.js"></script>
+</body>
+</html>

@@ -84,30 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(error => console.error(error));
     }
 
-    // Función para editar tarea (PUT o POST)
+    // Función para editar tarea (redirigir a la página de edición)
     function editarTarea(tareaId) {
-        const titulo = prompt('Nuevo título:');
-        const descripcion = prompt('Nueva descripción:');
-        const estado = prompt('Nuevo estado:');
-        const fecha = prompt('Nueva fecha:');
-
-        fetch('http://localhost/DS7/ToDoProject/backend/api.php', {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `tarea_id=${tareaId}&titulo=${titulo}&descripcion=${descripcion}&estado=${estado}&fecha=${fecha}`,
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                // Actualizar la lista de tareas después de editar una tarea
-                fetch('http://localhost/DS7/ToDoProject/backend/api.php')
-                    .then(response => response.json())
-                    .then(mostrarTareas)
-                    .catch(error => console.error(error));
-            })
-            .catch(error => console.error(error));
+        window.location.href = `editarTarea.html?tarea_id=${tareaId}`;
     }
 
     // Asignar manejador de evento para agregar tarea
