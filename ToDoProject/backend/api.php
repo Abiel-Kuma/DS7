@@ -102,7 +102,7 @@ elseif ($metodo === 'PUT') {
     if (!empty($tarea_id) && !empty($titulo) && !empty($descripcion) && !empty($estado) && !empty($fecha)) {
         $consulta = "UPDATE task SET Titulo = ?, Descripcion = ?, Estado = ?, Fecha = ? WHERE ID = ?";
         $stmt = $conexion->prepare($consulta);
-        $stmt->bind_param("ssssi", $titulo, $descripcion, $estado, $fecha, $tarea_id);
+        $stmt->bind_param("sssss", $titulo, $descripcion, $estado, $fecha, $tarea_id);
 
         if ($stmt->execute()) {
             $response = [

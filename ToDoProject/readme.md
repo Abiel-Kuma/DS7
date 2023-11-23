@@ -1,6 +1,4 @@
-# README del Proyecto
-
-## Sistema de Gestión de Tareas
+# Sistema de Gestión de Tareas
 
 Este script en PHP sirve como backend para un simple Sistema de Gestión de Tareas. Maneja operaciones básicas CRUD (Crear, Leer, Actualizar, Eliminar) para tareas almacenadas en una base de datos. El script utiliza una base de datos MySQL para el almacenamiento de datos y asume una tabla llamada `task` con columnas `ID`, `Titulo` (Título), `Descripcion` (Descripción), `Estado` (Estado), y `Fecha` (Fecha).
 
@@ -8,7 +6,7 @@ Este script en PHP sirve como backend para un simple Sistema de Gestión de Tare
 
 #### 1. Obtener Tareas (GET)
 
-- **Endpoint:** `/tasks.php`
+- **Endpoint:** `/api.php`
 - **Método:** GET
 - **Descripción:** Recupera todas las tareas de la base de datos y las devuelve como un array JSON.
 - **Respuesta:**
@@ -30,7 +28,7 @@ Este script en PHP sirve como backend para un simple Sistema de Gestión de Tare
 
 #### 2. Agregar una Nueva Tarea (POST)
 
-- **Endpoint:** `/tasks.php`
+- **Endpoint:** `/api.php`
 - **Método:** POST
 - **Parámetros:**
   - `titulo` (Título)
@@ -56,7 +54,7 @@ Este script en PHP sirve como backend para un simple Sistema de Gestión de Tare
 
 #### 3. Eliminar una Tarea (DELETE)
 
-- **Endpoint:** `/tasks.php`
+- **Endpoint:** `/api.php`
 - **Método:** DELETE
 - **Parámetros:**
   - `tarea_id` (ID de Tarea)
@@ -79,7 +77,7 @@ Este script en PHP sirve como backend para un simple Sistema de Gestión de Tare
 
 #### 4. Actualizar una Tarea (PUT o POST)
 
-- **Endpoint:** `/tasks.php`
+- **Endpoint:** `/api.php`
 - **Método:** PUT o POST
 - **Parámetros:**
   - `tarea_id` (ID de Tarea)
@@ -122,7 +120,7 @@ Este script en PHP sirve como backend para un simple Sistema de Gestión de Tare
 
 - Ejemplo de uso de la API con cURL para agregar una nueva tarea:
   ```bash
-  curl -X POST -d "titulo=Nueva Tarea&descripcion=Descripción de la tarea&estado=Pendiente&fecha=2023-02-01" http://tudominio.com/tasks.php
+  curl -X POST -d "titulo=Nueva Tarea&descripcion=Descripción de la tarea&estado=Pendiente&fecha=2023-02-01" http://tudominio.com/api.php
   ```
 
 ### Nota
