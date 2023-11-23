@@ -4,7 +4,7 @@ include 'conexion.php';
 $metodo = $_SERVER['REQUEST_METHOD'];
 
 if ($metodo === 'GET') {
-    // Consultar tareas y devolver JSON
+    // * Consultar tareas y devolver JSON
     $consulta = "SELECT ID, Titulo, Descripcion, Estado, Fecha FROM task";
     $result = $conexion->query($consulta);
 
@@ -22,7 +22,7 @@ if ($metodo === 'GET') {
     ];
 }
 elseif ($metodo === 'POST') {
-    // Agregar nueva tarea
+    // * Agregar nueva tarea
     $titulo = $_POST['titulo'] ?? '';
     $descripcion = $_POST['descripcion'] ?? '';
     $estado = $_POST['estado'] ?? '';
@@ -61,7 +61,7 @@ elseif ($metodo === 'POST') {
     }
 }
 elseif ($metodo === 'DELETE') {
-    // Eliminar tarea
+    // * Eliminar tarea
     $tarea_id = $_GET['tarea_id'] ?? '';
 
     if (!empty($tarea_id)) {
@@ -90,7 +90,7 @@ elseif ($metodo === 'DELETE') {
     }
 }
 elseif ($metodo === 'PUT') {
-    // Actualizar tarea
+    // * Actualizar tarea
     $put_vars = json_decode(file_get_contents("php://input"), true);
 
     $tarea_id = $put_vars['tarea_id'] ?? '';
